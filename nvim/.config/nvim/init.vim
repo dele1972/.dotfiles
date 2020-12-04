@@ -50,7 +50,7 @@ syntax on                   " syntax highlighting
 
     source ~/.config/nvim/vim-plug/theme.vim
 
-"    source ~/.config/nvim/vim-plug/filehandling.vim
+    source ~/.config/nvim/vim-plug/filehandling.vim
     source ~/.config/nvim/vim-plug/coding.vim
 
     " @ToDo

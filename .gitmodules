@@ -13,3 +13,18 @@
 [submodule "submodules/fzf.vim"]
 	path = submodules/fzf.vim
 	url = https://github.com/junegunn/fzf.vim
+[submodule "submodules/vim"]
+	path = submodules/vim-dracula
+	url = https://github.com/dracula/vim
+[submodule "submodules/vim-commentary"]
+	path = submodules/vim-commentary
+	url = https://github.com/tpope/vim-commentary
+[submodule "submodules/vim-fugitive"]
+	path = submodules/vim-fugitive
+	url = https://github.com/tpope/vim-fugitive
+[submodule "submodules/vim-airline"]
+	path = submodules/vim-airline
+	url = https://github.com/vim-airline/vim-airline
+[submodule "submodules/fzf-checkout.vim"]
+	path = submodules/fzf-checkout.vim
+	url = https://github.com/stsewd/fzf-checkout.vim
