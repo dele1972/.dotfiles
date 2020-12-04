@@ -7,6 +7,7 @@ My home dotfiles to stow
 1. [Install stow](#install-stow)
 1. [Use stow](#use-stow)
    1. [Unlink stow](#unlink-stow)
+1. [TEMP - install nvim package plugins](#tmp-install-package)
 1. [Links](#links)
 
 <a name="install-stow"></a>
@@ -41,15 +42,19 @@ My home dotfiles to stow
 
 `stow -vDt ~ zsh`
 
+<a name="tmp-install-package"></a>
+
+## TEMP - install nvim package plugins  [↸](#toc)
+
+As an example I want to add the *fzf* plugin as *plugs-filehandler* package:
+
+1. `cd .dotfiles/submodules/`
+2. clone a plugin as submodule: `git submodule add https://github.com/junegunn/fzf`
+3. create a symbolic link:
+   1. `cd .dotfiles/nvim/.config/nvim/pack/plugs-filehandling/start`
+   2. create link: `ln -s ../../../../../../submodules/fzf fzf`
+
 <a name="links"></a>
-
-## TEMP
-
-In `.dotfiles/nvim/.config/nvim/pack/plugs-filehandling/start`
-
-```shell
-ln -s ../../../../../../submodules/vim-devicons vim-devicons
-```
 
 ## Links  [↸](#toc)
 
