@@ -21,5 +21,6 @@
   " Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' }
   packadd! fzf
   " Plug 'junegunn/fzf.vim'
+  " set rtp+=~/
   packadd! fzf.vim
 

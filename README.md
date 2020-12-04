@@ -8,6 +8,7 @@ My home dotfiles to stow
 1. [Use stow](#use-stow)
    1. [Unlink stow](#unlink-stow)
 1. [TEMP - install nvim package plugins](#tmp-install-package)
+1. [TEMP - Setup steps on a new machine](#tmp-new-machine)
 1. [Links](#links)
 
 <a name="install-stow"></a>
@@ -53,6 +54,52 @@ As an example I want to add the *fzf* plugin as *plugs-filehandler* package:
 3. create a symbolic link:
    1. `cd .dotfiles/nvim/.config/nvim/pack/plugs-filehandling/start`
    2. create link: `ln -s ../../../../../../submodules/fzf fzf`
+
+<a name="tmp-new-machine"></a>
+
+## TEMP - Setup steps on a new machine  [↸](#toc)
+
+### 1) clone this repo
+
+### 2) install stow
+
+### 3) Get Submodules (nvim only)
+
+`git submodule update --init`
+
+### 4) Install ZSH
+
+- [How to Install ZSH Shell on Ubuntu 18.04 LTS](https://linuxhint.com/install_zsh_shell_ubuntu_1804/)
+
+### 5) Install Oh-My-ZSH
+
+- [github](https://github.com/ohmyzsh/ohmyzsh)
+
+### 6) Install NeoVim
+
+#### Special NerdFonts are needed for nerdtree / devicons
+
+```shell
+mkdir -p ~/.local/share/fonts
+
+cd ~/.local/share/fonts && curl -fLo "Droid Sans Mono for Powerline Nerd Font Complete.otf" https://github.com/ryanoasis/nerd-fonts/raw/master/patched-fonts/DroidSansMono/complete/Droid%20Sans%20Mono%20Nerd%20Font%20Complete.otf
+```
+
+Fira won't work :(
+Other usable Fonts will follow...
+https://github.com/ryanoasis/nerd-fonts#font-installation
+
+#### Install Fuzzy (File) Finder
+
+`sudo apt-get install fzf`
+
+### 7) stow it
+
+`stow --adopt -vt ~ nvim`
+
+## TRMP - To update submodules
+
+`git submodule foreach git pull origin master`
 
 <a name="links"></a>
 
