@@ -4,10 +4,10 @@ My home dotfiles to stow
 <a name="toc"></a>
 
 ## Table of Content
-1. [Install stow](install-stow)
-1. [Use stow](use-stow)
-   1. [Unlink stow](unlink-stow)
-1. [Links](links)
+1. [Install stow](#install-stow)
+1. [Use stow](#use-stow)
+   1. [Unlink stow](#unlink-stow)
+1. [Links](#links)
 
 <a name="install-stow"></a>
 
