@@ -43,6 +43,14 @@ My home dotfiles to stow
 
 <a name="links"></a>
 
+## TEMP
+
+In `.dotfiles/nvim/.config/nvim/pack/plugs-filehandling/start`
+
+```shell
+ln -s ../../../../../../submodules/vim-devicons vim-devicons
+```
+
 ## Links  [↸](#toc)
 
 - A list of [.dotfiles](http://dotfiles.github.io/) - feel free to try some configurations which are published there.

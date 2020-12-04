@@ -1,0 +1,15 @@
+[submodule "submodules/nerdtree"]
+	path = submodules/nerdtree
+	url = https://github.com/preservim/nerdtree
+[submodule "submodules/nerdtree-git-plugin"]
+	path = submodules/nerdtree-git-plugin
+	url = https://github.com/Xuyuanp/nerdtree-git-plugin
+[submodule "submodules/vim-devicons"]
+	path = submodules/vim-devicons
+	url = https://github.com/ryanoasis/vim-devicons
+[submodule "submodules/fzf"]
+	path = submodules/fzf
+	url = https://github.com/junegunn/fzf
+[submodule "submodules/fzf.vim"]
+	path = submodules/fzf.vim
+	url = https://github.com/junegunn/fzf.vim
