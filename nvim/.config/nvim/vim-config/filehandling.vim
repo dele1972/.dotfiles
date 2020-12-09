@@ -14,7 +14,19 @@
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
   " Toggle
-  nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+  " nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+  " Open NERDTree in the directory of the current file (or /home if no file is open)
+  " https://superuser.com/a/868124
+  nnoremap <silent> <C-b> :call NERDTreeToggleInCurDir()<CR>
+  " nmap <silent> <C-i> :call NERDTreeToggleInCurDir()<cr>
+  function! NERDTreeToggleInCurDir()
+    " If NERDTree is open in the current buffer
+    if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+      exe ":NERDTreeClose"
+    else
+      exe ":NERDTreeFind"
+    endif
+  endfunction
 
   " nerdtree-git-plugin (https://github.com/Xuyuanp/nerdtree-git-plugin)
     let g:NERDTreeGitStatusUseNerdFonts = 1 " you should install nerdfonts by yourself. default: 0
