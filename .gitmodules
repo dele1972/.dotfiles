@@ -28,3 +28,6 @@
 [submodule "submodules/fzf-checkout.vim"]
 	path = submodules/fzf-checkout.vim
 	url = https://github.com/stsewd/fzf-checkout.vim
+[submodule "submodules/vim-gutentags"]
+	path = submodules/vim-gutentags
+	url = https://github.com/ludovicchabant/vim-gutentags

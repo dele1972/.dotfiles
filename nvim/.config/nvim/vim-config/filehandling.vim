@@ -9,6 +9,10 @@
   let g:NERDTreeMinimalUI = 1
   let g:NERDTreeIgnore = ['\.git$','^node_modules$']
   let g:NERDTreeStatusline = ''
+  let g:NERDTreeQuitOnOpen = 1                        " close NERDTree window after opening a file
+  " use relative line numbers in NERDTree
+  let NERDTreeShowLineNumbers=1                       " enable line numbers
+  autocmd FileType nerdtree setlocal relativenumber   " make sure relative line numbers are used
 
   " Automaticaly close nvim if NERDTree is only thing left open
   autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
