@@ -61,3 +61,82 @@
     "
       nnoremap <leader>gc :GCheckout<CR>
 
+"                *** CODE NAVIGATION
+  " vim-gutentags
+    " commands
+      " <C-]> ... <ontrol> + <AltGr> + 9   jump to definition
+      " <C-t> ...........................  jump back
+      " https://andrew.stwrt.ca/posts/vim-ctags/
+    " help Gutentags to find project root
+    let g:gutentags_add_default_project_roots = 0
+    let g:gutentags_project_root = ['package.json', '.git']
+    "prevent creation of `tags` and `tags.lock` files in the project dir
+    "(result: no gitignore needed for that)
+    let g:gutentags_cache_dir = expand('~/.cache/nvim/ctags/')
+    " command to clear the cache
+    " command! -nargs=0 GutentagsClearCache call system('rm ' . g:gutentags_cache_dir . '/*')
+    " tell Gutentags when it has to update the tags
+    let g:gutentags_generate_on_new = 1
+    let g:gutentags_generate_on_missing = 1
+    let g:gutentags_generate_on_write = 1
+    let g:gutentags_generate_on_empty_buffer = 0
+    " let Gutentags generate more info for the tags
+    "   - `a` ... Access (or export) of class members
+    "   - `i` ...  Inheritance information
+    "   - `l` ...  Language of input file containing tag
+    "   - `m` ...  Implementation information
+    "   - `n` ...  Line number of tag definition
+    "   - `S` ...  Signature of routine (e.g. prototype or parameter list)"
+    let g:gutentags_ctags_extra_args = [
+      \ '--tag-relative=yes',
+      \ '--fields=+ailmnS',
+      \ ]
+    " Making Gutentags faster by ignoring a lot of unnecessary filetypes
+    let g:gutentags_ctags_exclude = [
+      \ '*.git', '*.svg', '*.hg',
+      \ '*/tests/*',
+      \ 'build',
+      \ 'dist',
+      \ '*sites/*/files/*',
+      \ 'bin',
+      \ 'node_modules',
+      \ 'bower_components',
+      \ 'cache',
+      \ 'compiled',
+      \ 'docs',
+      \ 'example',
+      \ 'bundle',
+      \ 'vendor',
+      \ '*.md',
+      \ '*-lock.json',
+      \ '*.lock',
+      \ '*bundle*.js',
+      \ '*build*.js',
+      \ '.*rc*',
+      \ '*.json',
+      \ '*.min.*',
+      \ '*.map',
+      \ '*.bak',
+      \ '*.zip',
+      \ '*.pyc',
+      \ '*.class',
+      \ '*.sln',
+      \ '*.Master',
+      \ '*.csproj',
+      \ '*.tmp',
+      \ '*.csproj.user',
+      \ '*.cache',
+      \ '*.pdb',
+      \ 'tags*',
+      \ 'cscope.*',
+      \ '*.css',
+      \ '*.less',
+      \ '*.scss',
+      \ '*.exe', '*.dll',
+      \ '*.mp3', '*.ogg', '*.flac',
+      \ '*.swp', '*.swo',
+      \ '*.bmp', '*.gif', '*.ico', '*.jpg', '*.png',
+      \ '*.rar', '*.zip', '*.tar', '*.tar.gz', '*.tar.xz', '*.tar.bz2',
+      \ '*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx',
+      \ ]
+

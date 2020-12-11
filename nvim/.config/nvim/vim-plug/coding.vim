@@ -20,3 +20,6 @@
   " Plug 'stsewd/fzf-checkout.vim'
   packadd! fzf-checkout.vim
 
+  " vim-gutentags
+  packadd! vim-gutentags
+
