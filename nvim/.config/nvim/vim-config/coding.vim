@@ -67,6 +67,7 @@
       " <C-]> ... <ontrol> + <AltGr> + 9   jump to definition
       " <C-t> ...........................  jump back
       " https://andrew.stwrt.ca/posts/vim-ctags/
+    " Following configurations are recommendations of [How to setup ctags with gutentags properly for almost every language](https://www.reddit.com/r/vim/comments/d77t6j/guide_how_to_setup_ctags_with_gutentags_properly/)
     " help Gutentags to find project root
     let g:gutentags_add_default_project_roots = 0
     let g:gutentags_project_root = ['package.json', '.git']
