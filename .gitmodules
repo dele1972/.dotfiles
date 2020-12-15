@@ -31,3 +31,6 @@
 [submodule "submodules/vim-gutentags"]
 	path = submodules/vim-gutentags
 	url = https://github.com/ludovicchabant/vim-gutentags
+[submodule "submodules/gruvbox"]
+	path = submodules/gruvbox
+	url = https://github.com/morhetz/gruvbox
