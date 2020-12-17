@@ -1,0 +1,3 @@
+  " hardmode
+  " packadd! hardmode
+

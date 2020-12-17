@@ -61,6 +61,9 @@
     "
       nnoremap <leader>gc :GCheckout<CR>
 
+  " vim-signify
+    set updatetime=100
+
 "                *** CODE NAVIGATION
   " vim-gutentags
     " commands

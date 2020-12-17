@@ -3,6 +3,8 @@
   " Plug 'tpope/vim-commentary'
   packadd! vim-commentary
 
+
+
 "                *** GIT IMPLEMENTATION
   " vim-fugitive (tpope)
   " Plug 'tpope/vim-fugitive'
@@ -20,6 +22,16 @@
   " Plug 'stsewd/fzf-checkout.vim'
   packadd! fzf-checkout.vim
 
+  " vim-signify
+  packadd! vim-signify
+
+
+
+
+"                *** CODE NAVIGATION
   " vim-gutentags
   packadd! vim-gutentags
+
+  " quick-scope
+  packadd! quick-scope
 

@@ -7,7 +7,8 @@
 -[ ] Git
   -[x] fugitive
        - [ ] Documentation
-  -[ ] add Editor Hunk Git Status Symbols' - [vim-signify](https://github.com/mhinz/vim-signify/blob/master/doc/signify.txt)
+  -[x] add Editor Hunk Git Status Symbols' - [vim-signify](https://github.com/mhinz/vim-signify/blob/master/doc/signify.txt)
+       - [ ] Documentation
   -[ ] local History?
   -[ ] Git History?
 -[ ] search content in project

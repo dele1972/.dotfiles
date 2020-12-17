@@ -14,6 +14,9 @@ set cc=100                   " set an 80 column border for good coding style
 filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on                   " syntax highlighting
 
+
+set termguicolors
+
 " Set space as Leader key
 " [and, why not?](https://superuser.com/questions/693528/vim-is-there-a-downside-to-using-space-as-your-leader-key)
   nnoremap <SPACE> <Nop>

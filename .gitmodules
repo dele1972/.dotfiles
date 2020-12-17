@@ -34,3 +34,12 @@
 [submodule "submodules/gruvbox"]
 	path = submodules/gruvbox
 	url = https://github.com/morhetz/gruvbox
+[submodule "submodules/vim-signify"]
+	path = submodules/vim-signify
+	url = https://github.com/mhinz/vim-signify
+[submodule "submodules/quick-scope"]
+	path = submodules/quick-scope
+	url = https://github.com/unblevable/quick-scope
+[submodule "submodules/hardmode"]
+	path = submodules/hardmode
+	url = https://github.com/wikitopian/hardmode
