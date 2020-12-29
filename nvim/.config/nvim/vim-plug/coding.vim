@@ -29,9 +29,27 @@
 
 
 "                *** CODE NAVIGATION
-  " vim-gutentags
+  " vim-gutentags (ctags handling)
   packadd! vim-gutentags
 
   " quick-scope
   packadd! quick-scope
+
+
+"                *** 'INTELLISENSE'
+  " YouCompleteMe (awsome for TS)
+  packadd! YouCompleteMe
+
+  " coc (awsome for all other)
+  packadd! coc.nvim
+
+
+"                *** PHP
+  " https://thevaluable.dev/vim-php-ide/
+  packadd! php.vim
+  packadd! vim-php-cs-fixer
+  packadd! ncm2
+  packadd! phpactor
+  packadd! ncm2-phpactor
+    packadd! nvim-yarp
 
