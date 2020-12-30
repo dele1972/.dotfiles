@@ -211,7 +211,7 @@ autocmd FileType cpp, cxx,h,hpp,c,php :call GoCoc()
       nnoremap <silent><leader>pcd :call PhpCsFixerFixDirectory()<CR>
       nnoremap <silent><leader>pcf :call PhpCsFixerFixFile()<CR>
     " ncm2
-      let g:python3_host_prog="/usr/bin/python3/"
+      let g:python3_host_prog="/usr/bin/python3"
         " Optional Vimrc Tips
           " suppress the annoying 'match x of y', 'The only match' and 'Pattern not
           " found' messages
