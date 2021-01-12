@@ -38,7 +38,7 @@
 
 "                *** 'INTELLISENSE'
   " YouCompleteMe (awsome for TS)
-  packadd! YouCompleteMe
+  " packadd! YouCompleteMe
 
   " coc (awsome for all other)
   packadd! coc.nvim

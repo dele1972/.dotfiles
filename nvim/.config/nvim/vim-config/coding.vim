@@ -65,6 +65,10 @@
     set updatetime=100
 
 "                *** CODE NAVIGATION
+  " quick-scope
+  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+
   " vim-gutentags
     " commands
       " <C-]> ... <ontrol> + <AltGr> + 9   jump to definition
@@ -169,8 +173,9 @@ function! GoCoc()
   nnoremap <buffer> <leader>cr :CocRestart
 endfunction
 
-autocmd FileType typescript :call GoYCM()
-autocmd FileType cpp, cxx,h,hpp,c,php :call GoCoc()
+" autocmd FileType typescript :call GoYCM()
+" autocmd FileType cpp, cxx,h,hpp,c,php :call GoCoc()
+autocmd FileType typescript, cpp, cxx,h,hpp,c,php :call GoCoc()
 
 
 "                *** PHP

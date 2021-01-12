@@ -28,6 +28,11 @@ set termguicolors
   xnoremap J :move '>+1<CR>gv=gv
 
 
+" Map <Esc> to `jj` during insert mode
+" (see https://vim.fandom.com/wiki/Avoid_the_escape_key)
+  inoremap jj <Esc>
+
+
 ""setup vim-plug {{{
 "  "Note: install vim-plug if not present
 "  if empty(glob('~/.config/nvim/autoload/plug.vim'))
