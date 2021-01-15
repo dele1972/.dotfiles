@@ -10,6 +10,7 @@ My home dotfiles to stow
 1. [TEMP - install nvim package plugins](#tmp-install-package)
 1. [TEMP - Setup steps on a new machine](#tmp-new-machine)
 1. [Links](#links)
+1. [Subprojects](#subprojects)
 
 <a name="install-stow"></a>
 
@@ -97,7 +98,7 @@ https://github.com/ryanoasis/nerd-fonts#font-installation
 
 `stow --adopt -vt ~ nvim`
 
-## TRMP - To update submodules
+## TMP - To update submodules
 
 `git submodule foreach git pull origin master`
 
@@ -108,4 +109,12 @@ https://github.com/ryanoasis/nerd-fonts#font-installation
 - A list of [.dotfiles](http://dotfiles.github.io/) - feel free to try some configurations which are published there.
 - This is the *dotfiles* Repo of [Leeren](https://github.com/leeren/dotfiles/) - have a look at the *git submodule* configuration for the *nvim* plugins.
 - A beginner friendly introducing video to stow: [Sync your .dotfiles with git and GNU #Stow like a pro!](https://youtu.be/CFzEuBGPPPg) ([DevInsideYou](https://www.youtube.com/channel/UCSBUwLT9zXhUalKfJrc2q2A), 01.12.2019)
+
+<a name="subprojects"></a>
+
+## Subprojects  [↸](#toc)
+
+My 'Projects' which are handled by *stow*.
+
+- [My (Neo-)Vim configuration](./doc/my-nvim-configuration.md)
 

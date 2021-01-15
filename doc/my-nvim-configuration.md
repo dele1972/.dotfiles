@@ -15,11 +15,15 @@
 - [ ] code navigation / [Intelligent code completion](https://en.wikipedia.org/wiki/Intelligent_code_completion) ('Intellisense')
   - [x] ctags
     - [ ] Documentation
+    - [ctags-install](./ctags-install.md)
   - [ ] following with the filetype dependent usage (from ThePrimeagen)
     - [x] coc
       - [ ] Documentation
-    - [x] YCM [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)
+    - [x] ~~YCM [YouCompleteMe](https://github.com/ycm-core/YouCompleteMe)~~
       - [ ] Documentation
+      - [YouCompleteMe-install](YouCompleteMe-install.md)
+      - deinstalled because of problems in combination with coc
+        - `[coc.nvim]: Some plugin change completeopt on insert mode` (like this [issue](https://github.com/neoclide/coc.nvim/issues/2317))
 - [x] commenter
   - [ ] Documentation
 - [ ] emmet
@@ -36,12 +40,15 @@
         - [ ] Documentation
       - [x] vim-php-cs-fixer	https://github.com/stephpy/vim-php-cs-fixer
         - [ ] Documentation
+        - [vim-php-cs-fixer--install](./vim-php-cs-fixer--install.md)
       - [x] ncm2			https://github.com/ncm2/ncm2
         - [ ] Documentation
       - [x] phpactor		https://github.com/phpactor/phpactor
         - [ ] Documentation
+        - [phpactor--install](./phpactor--install.md)
       - [x] ncm2-phpactor		https://github.com/phpactor/ncm2-phpactor
         - [ ] Documentation
+        - [ncm-2-phpactor--install](./ncm2-phpactor--install.md)
   - [ ] Typescript
     - [ ] [leafgarland/typescript-vim](https://github.com/leafgarland/typescript-vim)?
   - [ ] Javascript
