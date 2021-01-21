@@ -10,3 +10,9 @@
   "Plug 'morhetz/gruvbox'
   packadd! gruvbox
 
+" *** ADDING HELPTAGS
+command! -nargs=0 -bar Helptags
+    \  for p in glob('~/.config/nvim/pack/plugs-theme/opt/*', 1, 1)
+    \|     exe 'packadd ' . fnamemodify(p, ':t')
+    \| endfor
+    \| helptags ALL

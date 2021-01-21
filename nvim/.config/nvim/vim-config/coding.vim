@@ -175,7 +175,7 @@ endfunction
 
 " autocmd FileType typescript :call GoYCM()
 " autocmd FileType cpp, cxx,h,hpp,c,php :call GoCoc()
-autocmd FileType typescript, cpp, cxx,h,hpp,c,php :call GoCoc()
+autocmd FileType typescript,cpp,cxx,h,hpp,c,php :call GoCoc()
 
 
 "                *** PHP
