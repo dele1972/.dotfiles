@@ -32,6 +32,12 @@ If the package/program/configuration folder is not stowed:
 
 #### 1. create subfolders for the programs which should be stowed
 
+*Syntax*:
+
+```shell
+{.dotfiles PROJECT-FOLDER}/{STOW-PACKAGENAME}/{WHAT TO STOW RELATIVE TO THE HOME DIRECTORY}
+```
+
 *Examples*:
 
 - if you want to stow `~/.zshrc` as **zsh** stow package, create: `.dotfiles/zsh/.zshrc`
@@ -41,17 +47,17 @@ If the package/program/configuration folder is not stowed:
 
 The stow command should be called in the project folder (in this case `.dotfiles`)
 
-**Syntax**:
+*Syntax*:
 ```shell
 stow -nvt ~ <what to stow> <what to stow, whitespace sep.>
 ```
 
-**Example**:
+*Example*:
 ```shell
 stow --adopt -nvt ~ zsh nvim
 ```
 
-**Options**:  
+*Options*:  
 `-n` .... 'simulate only' mode  
 `-v` .... verbose  
 `-S` .... stow (default not necessarey  
