@@ -34,7 +34,7 @@ If the package/program/configuration folder is not stowed:
 
 *Examples*:
 
-- if you want to stow `~/zshrc` as **zsh** stow package, create: `.dotfiles/zsh/.zshrc`
+- if you want to stow `~/.zshrc` as **zsh** stow package, create: `.dotfiles/zsh/.zshrc`
 - if you want to stow `~/.config/nvim` as **nvim** stow package, create: `.dotfiles/nvim/.config/nvim`
 
 #### 2. test stow
@@ -51,7 +51,7 @@ stow -nvt ~ <what to stow> <what to stow, whitespace sep.>
 stow --adopt -nvt ~ zsh nvim
 ```
 
-**Options**:
+**Options**:  
 `-n` .... 'simulate only' mode  
 `-v` .... verbose  
 `-S` .... stow (default not necessarey  
@@ -71,7 +71,7 @@ stow --adopt -vt ~ zsh
 
 1. move/copy files to the corresponding `.dotfile` filestructure
 2. rerun the `stow --adopt -vt ~ <stowpackagename>` at the `.dotfile` directory
-  - maybe at first with the `n` option for testing
+   - maybe at first with the `n` option for testing
 
 <a name="unlink-stow"></a>
 
