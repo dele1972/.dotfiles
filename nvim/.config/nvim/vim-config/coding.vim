@@ -156,7 +156,29 @@ function! GoYCM()
   nnoremap <buffer> <silent> <leader>rr :YcmCompleter RefactorRename<CR>
 endfunction
 
+" after error:
+"   E117: Unbekannte Funktion: <SNR>18_check_back_space                                                                                              
+"   E15: ungültiger Ausdruck: pumvisible() ? "\^N" : <80><fd>R18_check_back_space() ? "\^I" : coc#refresh()
+" --> https://www.reddit.com/r/neovim/comments/9s6byt/javascript_autocompletion_is_not_working/e932blg?utm_source=share&utm_medium=web2x&context=3
+  function! s:check_back_space() abort
+    let col = col('.') - 1
+    return !col || getline('.')[col - 1]  =~# '\s'
+  endfunction
+
 function! GoCoc()
+  command! -nargs=0 Prettier :CocCommand prettier.formatFile
+  " \ 'coc-css',
+  " \ 'coc-emmet',
+  " \ 'coc-highlight',
+  " \ 'coc-html',
+  " \ 'coc-json',
+  " \ 'coc-snippets',
+  " \ 'coc-eslint',
+  let g:coc_global_extensions = [
+  \ 'coc-prettier',
+  \ 'coc-tsserver'
+\ ]
+
   inoremap <buffer> <silent><expr> <TAB>
               \ pumvisible() ? "\<C-n>" :
               \ <SID>check_back_space() ? "\<TAB>" :

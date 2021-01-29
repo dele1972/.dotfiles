@@ -67,3 +67,12 @@
 [submodule "submodules/nvim-yarp"]
 	path = submodules/nvim-yarp
 	url = https://github.com/roxma/nvim-yarp
+[submodule "submodules/coc-tsserver"]
+	path = submodules/coc-tsserver
+	url = https://github.com/neoclide/coc-tsserver
+[submodule "submodules/coc-tslint-plugin"]
+	path = submodules/coc-tslint-plugin
+	url = https://github.com/neoclide/coc-tslint-plugin
+[submodule "submodules/coc-prettier"]
+	path = submodules/coc-prettier
+	url = https://github.com/neoclide/coc-prettier

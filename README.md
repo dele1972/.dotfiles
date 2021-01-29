@@ -25,14 +25,14 @@ My home dotfiles to stow
 1. create subfolders for the programs which should be stowed (`.dotfiles/zsh/.zshrc`)
 2. test stow
 
-`stow -nvt ~ <what to stow> <what to stow, whitespace sep.>`
-`stow --adopt -nvt ~ zsh nvim`
-`-n` .... 'simulate only' mode
-`-v` .... verbose
-`-S` .... stow (default not necessarey
-`-D` .... unstow
-`-t` .... target (home directory)
-`--adopt` force to overwrite
+`stow -nvt ~ <what to stow> <what to stow, whitespace sep.>`  
+`stow --adopt -nvt ~ zsh nvim`  
+`-n` .... 'simulate only' mode  
+`-v` .... verbose  
+`-S` .... stow (default not necessarey  
+`-D` .... unstow  
+`-t` .... target (home directory)  
+`--adopt` force to overwrite  
 
 3. stow
 

@@ -44,6 +44,12 @@
   packadd! coc.nvim
 
 
+"                *** TSLINT
+  packadd! coc-tsserver
+  packadd! coc-tslint-plugin
+  packadd! coc-prettier
+
+
 "                *** PHP
   " https://thevaluable.dev/vim-php-ide/
   packadd! php.vim
