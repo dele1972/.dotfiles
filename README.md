@@ -6,6 +6,8 @@ My home dotfiles to stow
 ## Table of Content
 1. [Install stow](#install-stow)
 1. [Use stow](#use-stow)
+   1. [Add Something to stow](#somethingto-stow)
+   1. [Add Files to stow](#addfiles-stow)
    1. [Unlink stow](#unlink-stow)
 1. [TEMP - install nvim package plugins](#tmp-install-package)
 1. [TEMP - Setup steps on a new machine](#tmp-new-machine)
@@ -22,11 +24,40 @@ My home dotfiles to stow
 
 ## Use stow  [↸](#toc)
 
-1. create subfolders for the programs which should be stowed (`.dotfiles/zsh/.zshrc`)
-2. test stow
+<a name="somethingto-stow"></a>
 
-`stow -nvt ~ <what to stow> <what to stow, whitespace sep.>`  
-`stow --adopt -nvt ~ zsh nvim`  
+### Add Something to stow
+
+If the package/program/configuration folder is not stowed:
+
+#### 1. create subfolders for the programs which should be stowed
+
+*Syntax*:
+
+```shell
+{.dotfiles PROJECT-FOLDER}/{STOW-PACKAGENAME}/{WHAT TO STOW RELATIVE TO THE HOME DIRECTORY}
+```
+
+*Examples*:
+
+- if you want to stow `~/.zshrc` as **zsh** stow package, create: `.dotfiles/zsh/.zshrc`
+- if you want to stow `~/.config/nvim` as **nvim** stow package, create: `.dotfiles/nvim/.config/nvim`
+
+#### 2. test stow
+
+The stow command should be called in the project folder (in this case `.dotfiles`)
+
+*Syntax*:
+```shell
+stow -nvt ~ <what to stow> <what to stow, whitespace sep.>
+```
+
+*Example*:
+```shell
+stow --adopt -nvt ~ zsh nvim
+```
+
+*Options*:  
 `-n` .... 'simulate only' mode  
 `-v` .... verbose  
 `-S` .... stow (default not necessarey  
@@ -34,9 +65,19 @@ My home dotfiles to stow
 `-t` .... target (home directory)  
 `--adopt` force to overwrite  
 
-3. stow
+#### 3. stow
 
-`stow --adopt -vt ~ zsh`
+```shell
+stow --adopt -vt ~ zsh
+```
+
+<a name="addfiles-stow"></a>
+
+### Add Files to stow 
+
+1. move/copy files to the corresponding `.dotfile` filestructure
+2. rerun the `stow --adopt -vt ~ <stowpackagename>` at the `.dotfile` directory
+   - maybe at first with the `n` option for testing
 
 <a name="unlink-stow"></a>
 
@@ -114,7 +155,7 @@ https://github.com/ryanoasis/nerd-fonts#font-installation
 
 ## Subprojects  [↸](#toc)
 
-My 'Projects' which are handled by *stow*.
+My 'Projects' which are handled by my *stow* configuration:
 
 - [My (Neo-)Vim configuration](./doc/my-nvim-configuration.md)
 
