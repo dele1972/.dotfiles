@@ -14,3 +14,11 @@ Fira won't work :(
 Other usable Fonts will follow...
 https://github.com/ryanoasis/nerd-fonts#font-installation
 
+## Links
+
+- [coc Extensions](https://github.com/neoclide/coc.nvim/wiki/Using-coc-extensions)
+- [Graphical vi-vim Cheat Sheet and Tutorial](http://www.viemu.com/a_vi_vim_graphical_cheat_sheet_tutorial.html)
+- [vim Cheat Sheet](https://cdn.shopify.com/s/files/1/0165/4168/files/preview.png)
+- [vim move shortcuts](http://inside.github.io/vim-presentation/images/vim-move-shortcuts.png)
+- [Is It Worth the Time?](https://xkcd.com/1205/)
+
