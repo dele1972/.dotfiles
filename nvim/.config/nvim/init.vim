@@ -14,6 +14,20 @@ set cc=100                   " set an 80 column border for good coding style
 filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on                   " syntax highlighting
 
+" settings from the Primeagen
+  set hidden
+  set noswapfile
+  set nobackup
+  " set undodir=~/.config/nvim/undodir
+  set undofile
+  set incsearch
+  set scrolloff=8
+  set noshowmode
+  set signcolumn=yes
+  set noerrorbells
+  set smartindent
+  set updatetime=50
+  set shortmess+=c
 
 set termguicolors
 

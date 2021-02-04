@@ -1219,7 +1219,9 @@
           ]
         }
       }
-    }
+    },
+    "prettier.tslintIntegration": false,
+    "prettier.onlyUseLocalVersion": true
   }
 }
 

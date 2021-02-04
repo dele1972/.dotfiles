@@ -65,6 +65,8 @@
     set updatetime=100
 
   " Airline
+  " source: https://github.com/vim-airline/vim-airline/issues/544#issuecomment-46767104
+  " But it seems not to work
     function! AirlineInit()
       " first define a new part for modified
       call airline#parts#define('modified', {
