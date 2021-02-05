@@ -289,7 +289,9 @@ autocmd FileType typescript,cpp,cxx,h,hpp,c,php :call GoCoc()
                   \ 'on_complete': ['ncm2#on_complete#omni', 'csscomplete#CompleteCSS'],
                   \ })
     " ncm2-phpactor
-      autocmd BufEnter * call ncm2#enable_for_buffer()
+      " the following line will activate ncm2 but the suggestion box will then
+      " allways select the first entry :-(
+      " autocmd BufEnter * call ncm2#enable_for_buffer()
       set completeopt=noinsert,menuone,noselect
   endfunction
 
