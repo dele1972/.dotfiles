@@ -76,3 +76,6 @@
 [submodule "submodules/coc-prettier"]
 	path = submodules/coc-prettier
 	url = https://github.com/neoclide/coc-prettier
+[submodule "submodules/vim-autoclose"]
+	path = submodules/vim-autoclose
+	url = https://github.com/Townk/vim-autoclose

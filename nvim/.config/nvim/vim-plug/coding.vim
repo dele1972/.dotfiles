@@ -50,6 +50,12 @@
   packadd! coc-prettier
 
 
+"                *** Close Bracets automatically
+" give this package a try, but it is in archive status on github
+" https://github.com/Townk/vim-autoclose
+  packadd! vim-autoclose
+
+
 "                *** PHP
   " https://thevaluable.dev/vim-php-ide/
   packadd! php.vim

@@ -65,6 +65,11 @@
     set updatetime=100
 
   " Airline
+  let g:airline#extensions#tabline#enabled=1    " show Buffer details
+  let g:airline_powerline_fonts=1               " use powerline fonts for a nice view
+  let g:airline_theme='gruvbox'
+  let g:hybrid_custom_term_colors=1
+  let g:hybrid_reduced_contrast=1
   " source: https://github.com/vim-airline/vim-airline/issues/544#issuecomment-46767104
   " But it seems not to work
     function! AirlineInit()

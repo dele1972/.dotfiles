@@ -14,6 +14,11 @@ set cc=100                   " set an 80 column border for good coding style
 filetype plugin indent on   " allows auto-indenting depending on file type
 syntax on                   " syntax highlighting
 
+set encoding=utf8
+" Enable Elite mode, NO ARROWS!
+  let g:elite_mode=1
+  
+
 " settings from the Primeagen
   set hidden
   set noswapfile
