@@ -79,6 +79,7 @@ set termguicolors
 
     source ~/.config/nvim/vim-plug/filehandling.vim
     source ~/.config/nvim/vim-plug/coding.vim
+    source ~/.config/nvim/vim-plug/main.vim
 
     " @ToDo
     " install https://github.com/iamcco/markdown-preview.nvim
@@ -95,6 +96,7 @@ set termguicolors
 
   " other configs
     source ~/.config/nvim/vim-config/setup-xclip.vim
+    source ~/.config/nvim/vim-config/presentation.vim
 
   
   " Automatic toggling between line number modes

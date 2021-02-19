@@ -79,3 +79,6 @@
 [submodule "submodules/vim-autoclose"]
 	path = submodules/vim-autoclose
 	url = https://github.com/Townk/vim-autoclose
+[submodule "submodules/goyo.vim"]
+	path = submodules/goyo.vim
+	url = https://github.com/junegunn/goyo.vim
