@@ -82,3 +82,6 @@
 [submodule "submodules/goyo.vim"]
 	path = submodules/goyo.vim
 	url = https://github.com/junegunn/goyo.vim
+[submodule "submodules/traces.vim"]
+	path = submodules/traces.vim
+	url = https://github.com/markonm/traces.vim
