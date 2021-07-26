@@ -1,115 +1,258 @@
-set nocompatible            " disable compatibility to old-time vi
-set showmatch               " show matching brackets.
-set ignorecase              " case insensitive matching
-set mouse=v                 " middle-click paste with mouse
-set hlsearch                " highlight search results
-set tabstop=2               " number of columns occupied by a tab character
-set softtabstop=2           " see multiple spaces as tabstops so <BS> does the right thing
-set expandtab               " converts tabs to white space
-set shiftwidth=2            " width for autoindents
-set autoindent              " indent a new line the same amount as the line just typed
-set number                  " add line numbers
-set wildmode=longest,list   " get bash-like tab completions
-set cc=100                   " set an 80 column border for good coding style
-filetype plugin indent on   " allows auto-indenting depending on file type
-syntax on                   " syntax highlighting
+lua require 'init'
 
-set encoding=utf8
-" Enable Elite mode, NO ARROWS!
-  let g:elite_mode=1
-  
-
-" settings from the Primeagen
-  set hidden
-  set noswapfile
-  set nobackup
-  " set undodir=~/.config/nvim/undodir
-  set undofile
-  set incsearch
-  set scrolloff=8
-  set noshowmode
-  set signcolumn=yes
-  set noerrorbells
-  set smartindent
-  set updatetime=50
-  set shortmess+=c
-
-set termguicolors
-
-" Set space as Leader key
-" [and, why not?](https://superuser.com/questions/693528/vim-is-there-a-downside-to-using-space-as-your-leader-key)
-  nnoremap <SPACE> <Nop>
-  let mapleader=" "
+"                        ---> OLD INIT SETTINGS <---
+"
+"             @TODO: convert them to `init.lua` and replace init.vim
+"                            by `lua/init.lua`
 
 
-" Multiline movement in vmode
-  xnoremap K :move '<-2<CR>gv=gv
-  xnoremap J :move '>+1<CR>gv=gv
 
+"                *** SETTINGS
+  filetype plugin indent on   " allows auto-indenting depending on file type
+  let g:elite_mode=1          " Enable Elite mode, NO ARROWS!
+  " settings from the Primeagen
+    " set noswapfile
+    " set nobackup
+    " set undodir=~/.config/nvim/undodir
+    " set undofile
+    " set scrolloff=8
+    " set noshowmode
+    " set signcolumn=yes
+    " set noerrorbells
+    " set updatetime=50
+    " set shortmess+=c
 
-" Map <Esc> to `jj` during insert mode
-" (see https://vim.fandom.com/wiki/Avoid_the_escape_key)
-  inoremap jj <Esc>
+  " Multiline movement in vmode
+    xnoremap K :move '<-2<CR>gv=gv
+    xnoremap J :move '>+1<CR>gv=gv
 
+  " Map <Esc> to `jj` during insert mode
+    " (see https://vim.fandom.com/wiki/Avoid_the_escape_key)
+    inoremap jj <Esc>
 
-""setup vim-plug {{{
-"  "Note: install vim-plug if not present
-"  if empty(glob('~/.config/nvim/autoload/plug.vim'))
-"    silent !curl -fLo ~/.config/nvim/autoload/plug.vim
-"          \ --create-dirs
-"          \ https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
-"    autocmd VimEnter * PlugInstall
-"  endif
-
-"  "Note: Skip initialization for vim-tiny or vim-small.
-"  if !1 | finish | endif
-"  if has('vim_starting')
-"    set nocompatible               " Be iMproved
-"    " Required:
-"    call plug#begin()
-"  endif
-
-""}}}
-
-
-"          *** PLUGIN SECTION
-  call plug#begin('~/.config/nvim/autoload/plugged')
-
-    source ~/.config/nvim/vim-plug/theme.vim
-
-    source ~/.config/nvim/vim-plug/filehandling.vim
-    source ~/.config/nvim/vim-plug/coding.vim
-    source ~/.config/nvim/vim-plug/main.vim
-
-    " @ToDo
-    " install https://github.com/iamcco/markdown-preview.nvim
-
-  call plug#end()
-
-
-"          *** CONFIG SECTION
-  source ~/.config/nvim/vim-config/theme.vim
-
-  " configs for installed plugins
-    source ~/.config/nvim/vim-config/filehandling.vim
-    source ~/.config/nvim/vim-config/coding.vim
-
-  " other configs
-    source ~/.config/nvim/vim-config/setup-xclip.vim
-    source ~/.config/nvim/vim-config/presentation.vim
-
-  
   " Automatic toggling between line number modes
-  " normal  - hybrid line numbers (relative numbers and current line shows the current line number)
-  " insert  - static absolute line numbers
-  set number relativenumber
-  augroup numbertoggle
-    autocmd!
-    autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
-    autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
-  augroup END
+    " normal  - hybrid line numbers (relative numbers and current line shows the current line number)
+    " insert  - static absolute line numbers
+    set number relativenumber
+    augroup numbertoggle
+      autocmd!
+      autocmd BufEnter,FocusGained,InsertLeave * set relativenumber
+      autocmd BufLeave,FocusLost,InsertEnter   * set norelativenumber
+    augroup END
 
   " wrap or not to wrap the lines
-  ":set wrap						" To wrap lines visually, i.e. the line is still one line of text, but Vim displays it on multiple lines.
-  :set nowrap						" To display long lines as just one line (i.e. you have to scroll horizontally to see the entire line)
+    ":set wrap						" To wrap lines visually, i.e. the line is still one line of text, but Vim displays it on multiple lines.
+    :set nowrap						" To display long lines as just one line (i.e. you have to scroll horizontally to see the entire line)
 
+
+
+"                *** NERD TREE 
+  " 'scrooloose/nerdtree' becomes 'preservim/nerdtree'
+  " https://github.com/preservim/nerdtree
+  " https://vimawesome.com/plugin/nerdtree-red
+
+  " Config Section
+    autocmd FileType nerdtree setlocal relativenumber   " make sure relative line numbers are used
+
+    " Automaticaly close nvim if NERDTree is only thing left open
+    autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+
+    " Toggle
+    " nnoremap <silent> <C-b> :NERDTreeToggle<CR>
+    " Open NERDTree in the directory of the current file (or /home if no file is open)
+    " https://superuser.com/a/868124
+    nnoremap <silent> <C-b> :call NERDTreeToggleInCurDir()<CR>
+    " nmap <silent> <C-i> :call NERDTreeToggleInCurDir()<cr>
+    function! NERDTreeToggleInCurDir()
+      " If NERDTree is open in the current buffer
+      if (exists("t:NERDTreeBufName") && bufwinnr(t:NERDTreeBufName) != -1)
+        exe ":NERDTreeClose"
+      else
+        exe ":NERDTreeFind"
+      endif
+    endfunction
+
+
+
+"                *** QUICK-SCOPE
+  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
+  highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
+
+
+
+"                *** GUTENTAGS
+  " commands
+    " <C-]> ... <ontrol> + <AltGr> + 9   jump to definition
+    " <C-t> ...........................  jump back
+    " https://andrew.stwrt.ca/posts/vim-ctags/
+
+  " Following configurations are recommendations of [How to setup ctags with gutentags properly for almost every language](https://www.reddit.com/r/vim/comments/d77t6j/guide_how_to_setup_ctags_with_gutentags_properly/)
+
+  " help Gutentags to find project root
+    let g:gutentags_add_default_project_roots = 0
+    let g:gutentags_project_root = ['package.json', '.git']
+    
+  "prevent creation of `tags` and `tags.lock` files in the project dir
+    "(result: no gitignore needed for that)
+    let g:gutentags_cache_dir = expand('~/.cache/nvim/ctags/')
+
+  " command to clear the cache
+    " command! -nargs=0 GutentagsClearCache call system('rm ' . g:gutentags_cache_dir . '/*')
+
+  " tell Gutentags when it has to update the tags
+    let g:gutentags_generate_on_new = 1
+    let g:gutentags_generate_on_missing = 1
+    let g:gutentags_generate_on_write = 1
+    let g:gutentags_generate_on_empty_buffer = 0
+    " let Gutentags generate more info for the tags
+    "   - `a` ... Access (or export) of class members
+    "   - `i` ...  Inheritance information
+    "   - `l` ...  Language of input file containing tag
+    "   - `m` ...  Implementation information
+    "   - `n` ...  Line number of tag definition
+    "   - `S` ...  Signature of routine (e.g. prototype or parameter list)"
+    let g:gutentags_ctags_extra_args = [
+      \ '--tag-relative=yes',
+      \ '--fields=+ailmnS',
+      \ ]
+    
+  " Making Gutentags faster by ignoring a lot of unnecessary filetypes
+    let g:gutentags_ctags_exclude = [
+      \ '*.git', '*.svg', '*.hg',
+      \ '*/tests/*',
+      \ 'build',
+      \ 'dist',
+      \ '*sites/*/files/*',
+      \ 'bin',
+      \ 'node_modules',
+      \ 'bower_components',
+      \ 'cache',
+      \ 'compiled',
+      \ 'docs',
+      \ 'example',
+      \ 'bundle',
+      \ 'vendor',
+      \ '*.md',
+      \ '*-lock.json',
+      \ '*.lock',
+      \ '*bundle*.js',
+      \ '*build*.js',
+      \ '.*rc*',
+      \ '*.json',
+      \ '*.min.*',
+      \ '*.map',
+      \ '*.bak',
+      \ '*.zip',
+      \ '*.pyc',
+      \ '*.class',
+      \ '*.sln',
+      \ '*.Master',
+      \ '*.csproj',
+      \ '*.tmp',
+      \ '*.csproj.user',
+      \ '*.cache',
+      \ '*.pdb',
+      \ 'tags*',
+      \ 'cscope.*',
+      \ '*.css',
+      \ '*.less',
+      \ '*.scss',
+      \ '*.exe', '*.dll',
+      \ '*.mp3', '*.ogg', '*.flac',
+      \ '*.swp', '*.swo',
+      \ '*.bmp', '*.gif', '*.ico', '*.jpg', '*.png',
+      \ '*.rar', '*.zip', '*.tar', '*.tar.gz', '*.tar.xz', '*.tar.bz2',
+      \ '*.pdf', '*.doc', '*.docx', '*.ppt', '*.pptx',
+      \ ]
+
+
+
+"                *** GOYO (distraction/presentation mode)
+  nmap <F5> :call TogglePresentationMode()<CR>
+  let g:presentationMode = 0
+  function! TogglePresentationMode()
+    set relativenumber! number! showmode! showcmd! hidden! ruler!
+    if g:presentationMode
+      " if on then turn off
+      let g:presentationMode = 0
+      if ! exists('#goyo')
+        Goyo!
+      endif
+      noremap <Left> <Left>
+      noremap <Right> <Right>
+    else
+      " if off then turn on
+      let g:presentationMode = 1
+      if ! exists('#goyo')
+        Goyo
+      endif
+      noremap <Left> :silent bp<CR> :redraw!<CR>
+      noremap <Right> :silent bn<CR> :redraw!<CR>
+      nmap <F2> :call DisplayPresentationBoundaries()<CR>
+      nmap <F3> :call FindExecuteCommand()<CR>
+
+      " jump to slides
+      nmap <F9> :call JumpFirstBuffer()<CR> :redraw!<CR>
+      nmap <F10> :call JumpSecondToLastBuffer()<CR> :redraw!<CR>
+      nmap <F11> :call JumpLastBuffer()<CR> :redraw!<CR>
+    endif
+  endfunction
+
+
+  let g:presentationBoundsDisplayed = 0
+  function! DisplayPresentationBoundaries()
+    if g:presentationBoundsDisplayed
+      match
+      set colorcolumn=0
+      let g:presentationBoundsDisplayed = 0
+    else
+      highlight lastoflines ctermbg=darkred guibg=darkred
+      match lastoflines /\%23l/
+      set colorcolumn=80
+      let g:presentationBoundsDisplayed = 1
+    endif
+  endfunction
+
+
+  " Automatically source an eponymous <file>.vim or <file>.<ext>.vim if it exists, as a bulked-up
+    " modeline and to provide file-specific customizations.
+    function! s:AutoSource()
+        let l:testedScripts = ['syntax.vim']
+        if expand('<afile>:e') !=# 'vim'
+            " Don't source the edited Vimscript file itself.
+            call add(l:testedScripts, 'syntax.vim')
+        endif
+
+        for l:filespec in l:testedScripts
+            if filereadable(l:filespec)
+                execute 'source' fnameescape(l:filespec)
+            endif
+        endfor
+
+        call FindExecuteCommand()
+    endfunction
+
+  " adds a line of <
+    nmap <leader>a :normal 20i<<CR>
+
+  " makes Ascii art font
+    nmap <leader>T :.!toilet -w 200 -f nancyj-fancy<CR>
+    nmap <leader>F :.!toilet -w 200 -f standard<CR>
+    nmap <leader>f :.!toilet -w 200 -f small<CR>
+  " makes Ascii border
+    nmap <leader>1 :.!toilet -w 200 -f term -F border<CR>
+
+
+  function! FindExecuteCommand()
+    let line = search('\S*!'.'!:.*')
+    if line > 0
+      let command = substitute(getline(line), "\S*!"."!:*", "", "")
+      execute "silent !". command
+      execute "normal gg0"
+      redraw
+    endif
+  endfunction
+
+  augroup AutoSource
+      autocmd! BufNewFile,BufRead * call <SID>AutoSource()
+  augroup END
