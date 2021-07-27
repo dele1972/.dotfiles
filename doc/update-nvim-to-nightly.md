@@ -79,39 +79,39 @@ sources:
 | ? | jremmen/vim-ripgrep | Fuzzy Finding | Bryan Kegley | |
 | ✖ | junegunn/fzf | | | |
 | ✖ | junegunn/fzf.vim | | | |
+| ✔ | gruvbox-community/gruvbox | gruvbox | ThePrimeagen | https://github.com/gruvbox-community/gruvbox |
+| ✔ | preservim/nerdtree | nerdtree | | https://github.com/preservim/nerdtree |
+| ✔ | Xuyuanp/nerdtree-git-plugin | nerdtree-git-plugin | | https://github.com/Xuyuanp/nerdtree-git-plugin |
+| ✖ | ryanoasis/vim-devicons | vim-devicons	- OLD | | https://github.com/ryanoasis/vim-devicons |
+| ✔ | kyazdani42/nvim-web-devicons	- LUA https://github.com/kyazdani42/nvim-web-devicons
+| ✖ | vim-airline/vim-airline | vim-airline | | https://github.com/vim-airline/vim-airline |
+| ✔ | statusline | | | |
+| ✔ | tpope/vim-fugitive | vim-fugitive | ThePrimeagen | https://github.com/tpope/vim-fugitive |
+| ✖ | stsewd/fzf-checkout.vim | fzf-checkout.vim | | https://github.com/stsewd/fzf-checkout.vim |
+| ✖ | Townk/vim-autoclose | vim-autoclose OLD | | https://github.com/Townk/vim-autoclose |
+| ✔ | windwp/nvim-autopairs | windwp/nvim-autopairs	- LUA | | https://github.com/windwp/nvim-autopairs |
+| ✖ | tpope/vim-commentary | vim-commentary - OLD comment line/section | | https://github.com/tpope/vim-commentary |
+| ✔ | b3nj5m1n/kommentary	| LUA comment line/section | | https://github.com/b3nj5m1n/kommentary |
+| ✔ | lewis6991/gitsigns.nvim | git editor addon for decorations and actions, required for statusline | | https://github.com/lewis6991/gitsigns.nvim |
+| ~ | hoob3rt/lualine.nvim | A blazing fast and easy to configure neovim statusline written in pure lua | | https://github.com/hoob3rt/lualine.nvim |
+| ✔ | ludovicchabant/vim-gutentags | vim-gutentags - ctags handling | | https://github.com/ludovicchabant/vim-gutentags |
+| ✔ | markonm/traces.vim | traces.vim	- regex, show matches instantly, lua? | | https://github.com/markonm/traces.vim |
+| ✔ | unblevable/quick-scope | quick-scope - helps to get to any word on a line in two or three keystrokes with Vim's built-in find char | | https://github.com/unblevable/quick-scope/ |
+| ✔ | junegunn/goyo.vim | goyo.vim - presentation mode, lua? | | https://github.com/junegunn/goyo.vim |
+| ~ | wikitopian/hardmode | hardmode - learn vim by the hard way..., lua? | | https://github.com/wikitopian/hardmode/ |
+| ~ | norcalli/nvim-colorizer.lua	| +++, A high-performance color highlighter for Neovim which has no external dependencies! Written in performant Lua | | https://github.com/norcalli/nvim-colorizer.lua |
+| ~ | sirver/ultisnips | +++, UltiSnips is the ultimate solution for snippets in Vim | | https://github.com/sirver/ultisnips |
 
-✔ gruvbox, https://github.com/gruvbox-community/gruvbox
+PHP LSP integration!
+-	  " https://thevaluable.dev/vim-php-ide/
+-	  packadd! php.vim		- ARCHIVED https://github.com/StanAngeloff/php.vim/
+-	  packadd! vim-php-cs-fixer	- https://github.com/stephpy/vim-php-cs-fixer/
+-	  packadd! ncm2			- https://github.com/ncm2/ncm2/
+-	  packadd! phpactor		- https://github.com/phpactor/phpactor/
+-	  packadd! ncm2-phpactor	- https://github.com/phpactor/ncm2-phpactor
+-	    packadd! nvim-yarp		- https://github.com/roxma/nvim-yarp/
 
-✔ nerdtree, https://github.com/preservim/nerdtree
-✔ nerdtree-git-plugin, https://github.com/Xuyuanp/nerdtree-git-plugin
-✖ vim-devicons					- OLD https://github.com/ryanoasis/vim-devicons
-✔ kyazdani42/nvim-web-devicons	- LUA https://github.com/kyazdani42/nvim-web-devicons
-✖ vim-airline 		- https://github.com/vim-airline/vim-airline
-✔ statusline
-✔ vim-fugitive, https://github.com/tpope/vim-fugitive
-✖ fzf-checkout.vim		- https://github.com/stsewd/fzf-checkout.vim
-✖ vim-autoclose			- OLD, https://github.com/Townk/vim-autoclose
-✔ windwp/nvim-autopairs	- LUA, https://github.com/windwp/nvim-autopairs
-✖ vim-commentary	    - OLD comment line/section, https://github.com/tpope/vim-commentary
-✔ b3nj5m1n/kommentary	- LUA comment line/section, https://github.com/b3nj5m1n/kommentary
-✔ lewis6991/gitsigns.nvim, git editor addon for decorations and actions, required for statusline; https://github.com/lewis6991/gitsigns.nvim
-~ hoob3rt/lualine.nvim	-  A blazing fast and easy to configure neovim statusline written in pure lua, https://github.com/hoob3rt/lualine.nvim
-✔ vim-gutentags			- ctags handling, https://github.com/ludovicchabant/vim-gutentags
-✔ traces.vim			- regex, show matches instantly, lua?, https://github.com/markonm/traces.vim
-✔ quick-scope		- helps to get to any word on a line in two or three keystrokes with Vim's built-in find char, https://github.com/unblevable/quick-scope/
-✔ goyo.vim 			- presentation mode, lua?, https://github.com/junegunn/goyo.vim
-~ hardmode			- learn vim by the hard way..., lua?, https://github.com/wikitopian/hardmode/
-~ PHP LSP integration!
-	  " https://thevaluable.dev/vim-php-ide/
-	  packadd! php.vim		- ARCHIVED https://github.com/StanAngeloff/php.vim/
-	  packadd! vim-php-cs-fixer	- https://github.com/stephpy/vim-php-cs-fixer/
-	  packadd! ncm2			- https://github.com/ncm2/ncm2/
-	  packadd! phpactor		- https://github.com/phpactor/phpactor/
-	  packadd! ncm2-phpactor	- https://github.com/phpactor/ncm2-phpactor
-	    packadd! nvim-yarp		- https://github.com/roxma/nvim-yarp/
-~ norcalli/nvim-colorizer.lua	- +++, A high-performance color highlighter for Neovim which has no external dependencies! Written in performant Lua, https://github.com/norcalli/nvim-colorizer.lua
-~ sirver/ultisnips				- +++, UltiSnips is the ultimate solution for snippets in Vim ,https://github.com/sirver/ultisnips
-
+----
 
 ## LSP
 
@@ -161,6 +161,3 @@ npm install -g typescript typescript-language-server
     -[Setting Up Vim and the Php Language Server Protocol](https://camilopayan.com/posts/setting-up-vim-and-the-php-language-server-protocol/)
   - Emmet
   	- https://github.com/aca/emmet-ls
-  
-  
-  
