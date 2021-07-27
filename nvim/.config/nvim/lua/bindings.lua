@@ -41,6 +41,14 @@
   --    :G                      git status
   --                              s - toggle to staged
   --                              u - toggle to unstaged
+  --                              dv  on the file to see changes
+  --                                  do  diffget: (o => obtain). The change under the cursor is 
+  --                                               replaced by the content of the other file 
+  --                                               making them identical.
+  --                                  dp  diffput: puts changes under the cursor into the other 
+  --                                               file making them identical (thus removing the diff).
+  --                                  ]c           Jump to the next diff
+  --                                  [c           Jump to the previous diff
   --                              dv  on the file to resolve for resolving merge conflicts
   --                                  jump to the '<<<<<<HEAD' line
   --                                  :diffget //2    take the selection of the left side

@@ -39,35 +39,39 @@
   }
 
 -- LSP (source https://bryankegley.me/posts/nvim-getting-started/)
-  --[[ local lspconfig = require'lspconfig'
-  local completion = require'completion'
-  local function custom_on_attach(client)
-    print('Attaching to ' .. client.name)
-    completion.on_attach(client)
-  end
-  local default_config = {
-    on_attach = custom_on_attach,
-  }
-  -- setup language servers here
-  lspconfig.tsserver.setup(default_config) ]]
+  -- local lspconfig = require'lspconfig'
+  -- local completion = require'completion'
+  -- local function custom_on_attach(client)
+  --   print('Attaching to ' .. client.name)
+  --   completion.on_attach(client)
+  -- end
+  -- local default_config = {
+  --   on_attach = custom_on_attach,
+  -- }
+  -- -- setup language servers here
+  -- lspconfig.tsserver.setup(default_config) 
 
-  --[[ -- to avoid errors dominating the editor the handler (textDocument/publishDiagnostics) will be customized
-  vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
-    vim.lsp.diagnostic.on_publish_diagnostics, {
-      underline = true,
-      virtual_text = false,
-      signs = true,
-      update_in_insert = true,
-    }
-  ) ]]
+  -- -- to avoid errors dominating the editor the handler (textDocument/publishDiagnostics) will be customized
+  -- vim.lsp.handlers["textDocument/publishDiagnostics"] = vim.lsp.with(
+  --   vim.lsp.diagnostic.on_publish_diagnostics, {
+  --     underline = true,
+  --     virtual_text = false,
+  --     signs = true,
+  --     update_in_insert = true,
+  --   }
+  -- )
+
 -- LSP
-  -- source [Keybindings and completion](https://github.com/neovim/nvim-lspconfig/issues/260#issuecomment-811815613)
-  -- but completion is added
+  -- source [Keybindings and completion](https://github.com/neovim/nvim-lspconfig#keybindings-and-completion)
+  -- but completion is added https://github.com/nvim-lua/completion-nvim#setup
   local nvim_lsp = require('lspconfig')
   local completion = require'completion'
 
-  -- Use an on_attach function to only map the following keys
-  -- after the language server attaches to the current buffer
+  -- Use an on_attach function to only map the following keys after the language server attaches to 
+  -- the current buffer
+  -- Note: you must pass the defined on_attach as an argument to every setup {} call and the
+  -- keybindings in on_attach only take effect after the language server has started 
+  -- (attached to the current buffer).
   local on_attach = function(client, bufnr)
     local function buf_set_keymap(...) vim.api.nvim_buf_set_keymap(bufnr, ...) end
     local function buf_set_option(...) vim.api.nvim_buf_set_option(bufnr, ...) end
