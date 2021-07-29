@@ -50,6 +50,7 @@ local bo = vim.bo	-- buffer-local options, vim.api.nvim_buf_set_option()  - beha
   bo.smartindent = true
   --bo.swapfile = false
   bo.fileencoding = ""    -- when empty, the file will be saved with UTF-8
+  bo.omnifunc = "syntaxcomplete#Complete"
 
 --[ OTHER OPTIONS ]--
   -- vim.opt.{option}: behaves like :set
@@ -57,3 +58,7 @@ local bo = vim.bo	-- buffer-local options, vim.api.nvim_buf_set_option()  - beha
   -- vim.opt_local.{option}: behaves like :setlocal
 
   vim.opt.shortmess:append({ c = true })    -- don't give `ins-completion-menu` messages (recommendation of the Primeagen)
+
+  vim.api.nvim_command('filetype plugin on')          -- enable loading the plugin files for specific file types
+  vim.api.nvim_command('filetype plugin indent on')   -- allows auto-indenting depending on file type
+

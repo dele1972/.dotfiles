@@ -207,3 +207,10 @@
     npairs.setup({
       fast_wrap = {}, -- change default fast wrap example available on github too
     })
+
+
+
+-- QUICK-SCOPE
+  vim.api.nvim_command("highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline")
+  vim.api.nvim_command("highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline")
+

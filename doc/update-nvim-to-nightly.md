@@ -93,7 +93,7 @@ sources:
 | ✖ | [tpope/vim-commentary](https://github.com/tpope/vim-commentary) | vim-commentary - OLD comment line/section | |
 | ✔ | [b3nj5m1n/kommentary](https://github.com/b3nj5m1n/kommentary)	| LUA comment line/section | |
 | ✔ | [lewis6991/gitsigns.nvim](https://github.com/lewis6991/gitsigns.nvim) | git editor addon for decorations and actions, required for statusline | |
-| ~ | [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim) | A blazing fast and easy to configure neovim statusline written in pure lua | |
+| ✔ | [hoob3rt/lualine.nvim](https://github.com/hoob3rt/lualine.nvim) | A blazing fast and easy to configure neovim statusline written in pure lua | |
 | ✔ | [ludovicchabant/vim-gutentags](https://github.com/ludovicchabant/vim-gutentags) | vim-gutentags - ctags handling | |
 | ✔ | [markonm/traces.vim](https://github.com/markonm/traces.vim) | traces.vim	- regex, show matches instantly, lua? | |
 | ✔ | [unblevable/quick-scope](https://github.com/unblevable/quick-scope/) | quick-scope - helps to get to any word on a line in two or three keystrokes with Vim's built-in find char | |
@@ -103,13 +103,21 @@ sources:
 | ~ | [sirver/ultisnips](https://github.com/sirver/ultisnips) | +++, UltiSnips is the ultimate solution for snippets in Vim | |
 
 PHP LSP integration!
--	  " https://thevaluable.dev/vim-php-ide/
--	  packadd! php.vim		- ARCHIVED https://github.com/StanAngeloff/php.vim/
--	  packadd! vim-php-cs-fixer	- https://github.com/stephpy/vim-php-cs-fixer/
--	  packadd! ncm2			- https://github.com/ncm2/ncm2/
--	  packadd! phpactor		- https://github.com/phpactor/phpactor/
--	  packadd! ncm2-phpactor	- https://github.com/phpactor/ncm2-phpactor
--	    packadd! nvim-yarp		- https://github.com/roxma/nvim-yarp/
+- https://thevaluable.dev/vim-php-ide/
+- `packadd! php.vim`          - ARCHIVED https://github.com/StanAngeloff/php.vim/
+- `packadd! vim-php-cs-fixer` - https://github.com/stephpy/vim-php-cs-fixer/
+- `packadd! ncm2`             - https://github.com/ncm2/ncm2/
+- `packadd! phpactor`         - https://github.com/phpactor/phpactor/
+- `packadd! ncm2-phpactor`    - https://github.com/phpactor/ncm2-phpactor
+-   `packadd! nvim-yarp`      - https://github.com/roxma/nvim-yarp/
+
+@TODO: **Integrate [JetBrains/phpstorm-stubs](https://github.com/JetBrains/phpstorm-stubs)**
+
+like mentioned in: https://youtu.be/P5tAKRVYj4E?t=4096 (german)
+
+LSP and php: intelephense?
+
+https://github.com/neovim/nvim-lspconfig/blob/master/CONFIG.md#intelephense
 
 ----
 
@@ -138,6 +146,7 @@ npm install -g typescript typescript-language-server
 
 #### Links
 
+- https://github.com/nvim-lua/completion-nvim/wiki/chain-complete-support
 - [How to Configure and Use Auto-Complete with Vim](https://linuxhint.com/vim_auto_complete/)
 - VIM: [cmdline-completion](http://vimdoc.sourceforge.net/htmldoc/cmdline.html#cmdline-completion)
 

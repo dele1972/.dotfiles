@@ -8,7 +8,8 @@ lua require 'init'
 
 
 "                *** SETTINGS
-  filetype plugin indent on   " allows auto-indenting depending on file type
+  " filetype plugin indent on   " allows auto-indenting depending on file type
+  " set omnifunc=syntaxcomplete#Complete
   let g:elite_mode=1          " Enable Elite mode, NO ARROWS!
   " settings from the Primeagen
     " set noswapfile
