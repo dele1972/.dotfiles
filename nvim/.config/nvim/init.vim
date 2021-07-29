@@ -8,8 +8,6 @@ lua require 'init'
 
 
 "                *** SETTINGS
-  " filetype plugin indent on   " allows auto-indenting depending on file type
-  " set omnifunc=syntaxcomplete#Complete
   let g:elite_mode=1          " Enable Elite mode, NO ARROWS!
   " settings from the Primeagen
     " set noswapfile
@@ -72,12 +70,6 @@ lua require 'init'
         exe ":NERDTreeFind"
       endif
     endfunction
-
-
-
-"                *** QUICK-SCOPE
-  highlight QuickScopePrimary guifg='#afff5f' gui=underline ctermfg=155 cterm=underline
-  highlight QuickScopeSecondary guifg='#5fffff' gui=underline ctermfg=81 cterm=underline
 
 
 
