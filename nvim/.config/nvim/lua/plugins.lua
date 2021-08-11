@@ -73,6 +73,7 @@ packer.startup(function()
   --[[ other Tools ]]--
     use 'markonm/traces.vim'            -- regex, show matches instantly
     use 'unblevable/quick-scope'        -- helps to get to any word on a line in two or three keystrokes with Vim's built-in find char
+    use 'vimwiki/vimwiki'
 
   end
 )

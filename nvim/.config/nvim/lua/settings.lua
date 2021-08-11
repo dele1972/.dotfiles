@@ -16,7 +16,7 @@ local bo = vim.bo	-- buffer-local options, vim.api.nvim_buf_set_option()  - beha
   o.incsearch = true
   o.ignorecase = true         -- case insensitive matching
   o.termguicolors = true
-  o.syntax = 'on'             -- enable syntax highlighting
+  -- o.syntax = 'on'             -- enable syntax highlighting (should be set in nvim by default)
   o.errorbells = false        -- don't ring the bell on errors
   o.showmode = false          -- don't show message on last line during insert, replace or visual mode
   o.showmatch = true          -- shows matching bracket
@@ -59,6 +59,13 @@ local bo = vim.bo	-- buffer-local options, vim.api.nvim_buf_set_option()  - beha
 
   vim.opt.shortmess:append({ c = true })    -- don't give `ins-completion-menu` messages (recommendation of the Primeagen)
 
-  vim.api.nvim_command('filetype plugin on')          -- enable loading the plugin files for specific file types
+
+--[ API OPTIONS ]--
+
+  -- vim.api.nvim_command('filetype plugin on')          -- enable loading the plugin files for specific file types; this should be set nvim by default
   vim.api.nvim_command('filetype plugin indent on')   -- allows auto-indenting depending on file type
 
+  -- Global variables `g:` (see [Using api functions](https://github.com/nanotee/nvim-lua-guide#using-api-functions-1))
+
+    -- vimwiki: change storage path and set to markdown syntax
+    vim.api.nvim_set_var('vimwiki_list', {{ path = '~/dev/vimwiki', syntax = 'markdown', ext = '.md'}})

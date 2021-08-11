@@ -168,6 +168,10 @@ _G.packer_plugins = {
   ["vim-ripgrep"] = {
     loaded = true,
     path = "/home/lederich/.local/share/nvim/site/pack/packer/start/vim-ripgrep"
+  },
+  vimwiki = {
+    loaded = true,
+    path = "/home/lederich/.local/share/nvim/site/pack/packer/start/vimwiki"
   }
 }
 
