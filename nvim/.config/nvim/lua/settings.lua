@@ -68,4 +68,4 @@ local bo = vim.bo	-- buffer-local options, vim.api.nvim_buf_set_option()  - beha
   -- Global variables `g:` (see [Using api functions](https://github.com/nanotee/nvim-lua-guide#using-api-functions-1))
 
     -- vimwiki: change storage path and set to markdown syntax
-    vim.api.nvim_set_var('vimwiki_list', {{ path = '~/dev/vimwiki', syntax = 'markdown', ext = '.md'}})
+    vim.api.nvim_set_var('vimwiki_list', {{ path = '~/Dokumente/vimwiki', syntax = 'markdown', ext = '.md'}})

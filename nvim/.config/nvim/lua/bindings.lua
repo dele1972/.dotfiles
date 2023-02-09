@@ -3,17 +3,19 @@
 -- source https://icyphox.sh/blog/nvim-lua/
   local map = vim.api.nvim_set_keymap
 
-  -- map the leader key
+  -- map the leader key (to space)
   map('n', '<Space>', '', {})
   vim.g.mapleader = ' '  -- 'vim.g' sets global variables
 
   options = { noremap = true }
-  map('n', '<leader><esc>', ':nohlsearch<cr>', options)
-  map('n', '<leader>n', ':bnext<cr>', options)
-  map('n', '<leader>p', ':bprev<cr>', options)
+  map('n', '<leader><esc>', ':nohlsearch<cr>', options)                               -- clear highlightnings
+  map('n', '<leader>n', ':bnext<cr>', options)                                        -- switch to next buffer (see Vim Tips Wiki 'Cycle through buffers including hidden buffers' - httsp://vim.dandom.com/wiki/Cycle_through_vuffers_including_hidden_buffers)
+  map('n', '<leader>p', ':bprev<cr>', options)                                        -- switch to previous buffer
 
 
 -- LSP (source https://bryankegley.me/posts/nvim-getting-started/)
+  -- see neovim [Language Server Protocol Documentation](neovim.io/doc/lsp)
+  -- @TODO: have a look to girhub [neovim/nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
   map('n', 'gd', ':lua vim.lsp.buf.definition()<CR>', options)
   map('n', 'gD', ':lua vim.lsp.buf.declaration()<CR>', options)
   map('n', 'gi', ':lua vim.lsp.buf.implementation()<CR>', options)

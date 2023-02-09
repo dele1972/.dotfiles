@@ -3,11 +3,12 @@
 New document status: **work in progress**
 
 @TODO:
--[ ] translations
--[ ] change content
--[ ] change TOC
 
-My home dotfiles to stow
+- [ ] translations
+- [ ] change content
+- [ ] change TOC
+
+Here're my configuration files. Currently I'm managing these by using stow.
 
 <a name="toc"></a>
 
@@ -23,6 +24,11 @@ My home dotfiles to stow
 1. [Subprojects](#subprojects)
 
 ## Installation Workflow for new machines
+
+```bash
+sudo apt-get update -y; sudo apt-get upgrade -y
+```
+
 
 ### 1. Install ZSH
 
